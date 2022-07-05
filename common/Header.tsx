@@ -94,10 +94,10 @@ export const Header = () => {
                 {stakePoolMetadata?.displayName || (
                   <img
                     className="inline-block w-4"
-                    src={'/cardinal-crosshair.svg'}
+                    src={'/airplane-icon-right.png'}
                   />
                 )}{' '}
-                Staking
+                The Hangar
               </TitleText>
             )}
           </a>
@@ -115,31 +115,6 @@ export const Header = () => {
           )}
         </div>
         <div className="relative my-auto flex items-center align-middle">
-          {stakePoolId && stakePoolMetadata ? (
-            stakePoolMetadata.links?.map((link) => (
-              <a key={link.value} href={link.value}>
-                <p className="my-auto mr-10 hover:cursor-pointer">
-                  {link.text}
-                </p>
-              </a>
-            ))
-          ) : (
-            <>
-              <div
-                onClick={() =>
-                  router.push(
-                    `/admin${
-                      ctx.environment.label !== 'mainnet-beta'
-                        ? `?cluster=${ctx.environment.label}`
-                        : ''
-                    }`
-                  )
-                }
-              >
-                <p className="my-auto mr-10 hover:cursor-pointer">Admin</p>
-              </div>
-            </>
-          )}
           {wallet.connected && wallet.publicKey ? (
             <AccountConnect
               dark={
