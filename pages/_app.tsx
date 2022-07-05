@@ -11,20 +11,8 @@ import {
 } from 'providers/EnvironmentProvider'
 import { WalletIdentityProvider } from '@cardinal/namespaces-components'
 import { UTCNowProvider } from 'providers/UTCNowProvider'
-import { QueryClient, QueryClientProvider } from 'react-query'
-import { ReactQueryDevtools } from 'react-query/devtools'
 
 require('@solana/wallet-adapter-react-ui/styles.css')
-
-export const queryClient = new QueryClient({
-  defaultOptions: {
-    queries: {
-      refetchOnWindowFocus: false,
-    },
-  },
-})
-
-export const DEBUG = false
 
 const App = ({
   Component,
@@ -36,12 +24,7 @@ const App = ({
       <WalletProvider autoConnect wallets={getWalletAdapters()}>
         <WalletIdentityProvider>
           <WalletModalProvider>
-            <QueryClientProvider client={queryClient}>
-              <>
-                <Component {...pageProps} />
-                {DEBUG && <ReactQueryDevtools initialIsOpen={false} />}
-              </>
-            </QueryClientProvider>
+            <Component {...pageProps} />
           </WalletModalProvider>
         </WalletIdentityProvider>
       </WalletProvider>

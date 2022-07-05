@@ -6,7 +6,12 @@ module.exports = {
     './rental-components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'yellowtail': ['yellowtail'],
+        'opensans': ['opensans']
+      }
+    },
   },
   plugins: [],
 }

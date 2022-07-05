@@ -14,12 +14,16 @@ import { useUTCNow } from 'providers/UTCNowProvider'
 import { contrastColorMode } from './utils'
 
 export const StyledWalletButton = styled(WalletMultiButton)`
-  color: rgb(55, 65, 81, 1);
+  color: white;
+  background: #7e02e6;
+  fontSize: '18px';
   &:hover {
-    background: none !important;
+    background-opacity: 80%;
   }
   .wallet-adapter-button {
     padding: 0px;
+    zIndex: 10,
+    height: '38px',
   }
 `
 export const TitleText = styled('div')`
@@ -67,7 +71,7 @@ export const Header = () => {
       )}
       <div className={`flex h-20 justify-between px-5 text-white`}>
         <div className="flex items-center gap-3">
-          <a
+          {/* <a
             target="_blank"
             href={
               stakePoolMetadata?.websiteUrl ||
@@ -85,9 +89,6 @@ export const Header = () => {
                   className="flex h-[35px] flex-col"
                   src={stakePoolMetadata?.imageUrl}
                 />
-                {/* <span className="ml-5 mt-1 flex flex-col">
-                  {stakePoolMetadata?.displayName} Staking
-                </span> */}
               </div>
             ) : (
               <TitleText className="flex items-center justify-center gap-2">
@@ -100,7 +101,7 @@ export const Header = () => {
                 The Hangar
               </TitleText>
             )}
-          </a>
+          </a> */}
           {ctx.environment.label !== 'mainnet-beta' && (
             <div className="cursor-pointer rounded-md bg-[#9945ff] p-1 text-[10px] italic text-white">
               {ctx.environment.label}
@@ -128,16 +129,7 @@ export const Header = () => {
               wallet={wallet as Wallet}
             />
           ) : (
-            <StyledWalletButton
-              style={{
-                fontSize: '14px',
-                zIndex: 10,
-                height: '38px',
-                border: 'none',
-                background: 'none',
-                backgroundColor: 'none',
-              }}
-            />
+            <StyledWalletButton />
           )}
         </div>
       </div>
