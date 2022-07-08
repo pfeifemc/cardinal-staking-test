@@ -263,6 +263,38 @@ export const stakePoolMetadatas: StakePoolMetadata[] = [
     },
   },
   {
+    name: 'monsta-scientist',
+    displayName: 'Monsta Scientist',
+    stakePoolAddress: new PublicKey(
+      '4hYMymEkyvBvY5ipLjiedvZu7Dp7oTshAsXcFVJZ9Bhv'
+    ),
+    websiteUrl: 'https://www.monstascientist.io/',
+    receiptType: ReceiptType.Original,
+    maxStaked: 4444,
+    imageUrl: 'https://raw.githubusercontent.com/monstadao/logo/main/monsta-scientist.jpg',
+    colors: {
+      primary: '#211F20',
+      secondary: '#211F20',
+      accent: '#000',
+    },
+  },
+  {
+    name: 'monsta-potion',
+    displayName: 'Monsta Potion',
+    stakePoolAddress: new PublicKey(
+      'FXuwtxvrL8BsTmW9ZBpYHyntKYciBRz9KX9z19iQjn8h'
+    ),
+    websiteUrl: 'https://www.monstascientist.io/',
+    receiptType: ReceiptType.Original,
+    maxStaked: 150,
+    imageUrl: 'https://c4cbdhxzucki34e4lofteofqngjip3dznomj22ui4en5kukyhi.arweave.net/FwQRnvmglI3wnFuLMjiwaZK_H7HlrmJ1qiOEb1VFYOs?ext=png',
+    colors: {
+      primary: '#211F20',
+      secondary: '#211F20',
+      accent: '#000',
+    },
+  },
+  {
     name: 'gemmy',
     displayName: 'Gemmy',
     stakePoolAddress: new PublicKey(
@@ -598,6 +630,49 @@ export const stakePoolMetadatas: StakePoolMetadata[] = [
       primary: '#394b5a',
       secondary: '#6e989d',
       fontColor: '#ffffff',
+    },
+  },
+  {
+    name: 'faceless-souls',
+    displayName: 'Faceless Souls',
+    stakePoolAddress: new PublicKey(
+      'H3GrgtE1HhSgpjm9XQNegHQeXdnhC2iLuaNuMy9bmcja'
+    ),
+    websiteUrl: 'https://stake.cardinal.so/faceless-souls',
+    receiptType: ReceiptType.Receipt,
+    imageUrl:
+      'https://p4e5f2irximos56xgqy7o57rowpbovspcht4ao6o5vxoevg4geoq.arweave.net/fwnS6RG6GOl31zQx93fxdZ4XVk8R58A7zu1u4lTcMR0',
+    maxStaked: 4444,
+    tokenStandard: TokenStandard.NonFungible,
+    hideAllowedTokens: true,
+    colors: {
+      primary: '#2d0c65',
+      secondary: '#ed69fa',
+      accent: '#f7f6fe',
+      fontColor: '#FFFFFF',
+    },
+  },
+  {
+    name: 'the-pilgrims',
+    displayName: 'The Pilgrims',
+    stakePoolAddress: new PublicKey(
+      'FmFr9KurNcUpwHiKgbwVf9Q8Dvy7e6k5XHNdtHrvoaBJ'
+    ),
+    websiteUrl: 'https://thepilgrims.xyz',
+    receiptType: ReceiptType.Original,
+    imageUrl:
+      'https://pq3boxq5w7tjxfmtl2hra72jkpmbswwmi66d3dz464isnsoqoq.arweave.net/fDYXXh235puVk16PEH9JU9gZWsxHvD2PP-PcRJsnQdA',
+    maxStaked: 2000,
+    tokenStandard: TokenStandard.NonFungible,
+    hideAllowedTokens: true,
+    styles: {
+      fontFamily: 'Paralucent',
+    },
+    colors: {
+      primary: '#282828',
+      secondary: '#A57F3D',
+      accent: '#f7f6fe',
+      fontColor: '#FFFFFF',
     },
   },
 ]
