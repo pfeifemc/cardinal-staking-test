@@ -14,7 +14,6 @@ import Head from 'next/head'
 import { useEnvironmentCtx } from 'providers/EnvironmentProvider'
 import * as splToken from '@solana/spl-token'
 import { useState } from 'react'
-import { Placeholder } from 'pages'
 import { pubKeyUrl, shortPubKey } from 'common/utils'
 import { FaQuestion } from 'react-icons/fa'
 import { useStakePoolsByAuthority } from 'hooks/useStakePoolsByAuthority'
@@ -200,8 +199,6 @@ function Admin() {
             <div className="grid grid-cols-3 gap-5">
               {!stakePools.isFetched && !stakePoolsMetadata.isFetched ? (
                 <>
-                  <Placeholder />
-                  <Placeholder />
                 </>
               ) : stakePoolsWithMetadata.length > 0 ||
                 stakePoolsWithoutMetadata.length > 0 ? (
