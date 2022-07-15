@@ -531,7 +531,7 @@ function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <div className='text-[50px] lg:text-[85px] w-fit mx-auto py-8 font-yellowtail text-shadow'>Welcome to the Hangar</div>
+      <div className='text-[50px] lg:text-[85px] w-fit mx-auto py-8 font-yellowtail text-shadow text-center'>Welcome to the Hangar</div>
       {!wallet.connected ? (
         <div>
           <div className='w-fit mx-auto text-5xl text-shadow'>Connect Wallet to Begin</div>
