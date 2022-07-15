@@ -1004,7 +1004,7 @@ function Home() {
                 ) : (
                   <div></div>
                 )}
-                <MouseoverTooltip title="Click on tokens to select them">
+                {/* <MouseoverTooltip title="Click on tokens to select them"> */}
                   <button
                     onClick={() => {
                       if (unstakedSelected.length === 0) {
@@ -1016,15 +1016,15 @@ function Home() {
                         handleStake()
                       }
                     }}
+                    disabled={true}
                     style={{
-                      background:
-                        stakePoolMetadata?.colors?.secondary ||
-                        defaultSecondaryColor,
+                      background: "gray",
                       color:
                         stakePoolMetadata?.colors?.fontColorSecondary ||
                         stakePoolMetadata?.colors?.fontColor,
                     }}
-                    className="my-auto flex rounded-lg px-4 py-2 hover:scale-[1.03]"
+                    className="my-auto flex rounded-lg px-4 py-2"
+                    // hover:scale-[1.03]
                   >
                     <span className="mr-1 inline-block">
                       {loadingStake && (
@@ -1042,7 +1042,7 @@ function Home() {
                       Stake Jets ({unstakedSelected.length})
                     </span>
                   </button>
-                </MouseoverTooltip>
+                {/* </MouseoverTooltip> */}
               </div>
             </div>
             <div
